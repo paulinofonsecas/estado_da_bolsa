@@ -12,16 +12,36 @@ class TiledInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(titlo),
-        Text(
-          desc,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Text(
+                titlo,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Spacer(),
+              Text(
+                desc,
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ],
           ),
-        ),
-      ],
+          Divider(
+            height: 1,
+            indent: 10,
+            endIndent: 10,
+            color: Colors.black.withOpacity(0.4),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:estado_da_bolsa/app/cubits/tela_de_consulta.dart';
-import 'package:estado_da_bolsa/app/pages/tela_de_consulta.dart';
+import 'package:estado_da_bolsa/app/pages/tela_de_consulta/tela_de_consulta.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,8 +13,8 @@ class AppWidget extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xff282936),
       ),
       home: BlocProvider(
-        create: (_) => TelaDeConsultaCubit(),
-        child: TelaDeConsulta(),
+        create: (_) => HomeCubit(_),
+        child: Home(),
       ),
     );
   }
